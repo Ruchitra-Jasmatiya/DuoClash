@@ -1,0 +1,407 @@
+/* =========================================
+   DUOCLASH NAVBAR
+========================================= */
+
+.duoclash-navbar {
+  width: 100%;
+  height: 78px;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  z-index: 1000;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 6%;
+
+  background: rgba(10, 29, 43, 0.94);
+
+  border-bottom: 1px solid rgba(190, 158, 91, 0.28);
+
+  backdrop-filter: blur(10px);
+
+  box-shadow:
+    0 8px 30px rgba(3, 15, 25, 0.25);
+}
+
+
+/* =========================================
+   LOGO
+========================================= */
+
+.duoclash-logo {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  text-decoration: none;
+
+  cursor: pointer;
+}
+
+.duoclash-logo img {
+  width: 48px;
+  height: 48px;
+
+  object-fit: contain;
+
+  transition:
+    transform 0.3s ease,
+    filter 0.3s ease;
+}
+
+.duoclash-logo:hover img {
+  transform: rotate(-5deg) scale(1.06);
+
+  filter: drop-shadow(
+    0 0 8px rgba(194, 159, 91, 0.5)
+  );
+}
+
+
+/* =========================================
+   LOGO TEXT
+========================================= */
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+
+  gap: 2px;
+}
+
+.logo-name {
+  color: #d5b56a;
+
+  font-size: 20px;
+  font-weight: 900;
+
+  letter-spacing: 2px;
+
+  line-height: 1;
+}
+
+.logo-tagline {
+  color: #8ca69d;
+
+  font-size: 7px;
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+}
+
+
+/* =========================================
+   DESKTOP LINKS
+========================================= */
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+}
+
+.nav-link {
+  position: relative;
+
+  padding: 10px 18px;
+
+  color: #c9a968;
+
+  text-decoration: none;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  letter-spacing: 0.5px;
+
+  border-radius: 7px;
+
+  transition:
+    color 0.25s ease,
+    background 0.25s ease,
+    transform 0.25s ease;
+}
+
+.nav-link::after {
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+  bottom: 3px;
+
+  width: 0;
+  height: 2px;
+
+  transform: translateX(-50%);
+
+  background: #d6b46b;
+
+  transition: width 0.25s ease;
+}
+
+.nav-link:hover {
+  color: #f0d18b;
+
+  background: rgba(61, 103, 88, 0.18);
+
+  transform: translateY(-2px);
+}
+
+.nav-link:hover::after {
+  width: 45%;
+}
+
+
+/* ACTIVE PAGE */
+
+.nav-link.active {
+  color: #f0d18b;
+
+  background: rgba(58, 98, 83, 0.28);
+}
+
+.nav-link.active::after {
+  width: 55%;
+}
+
+
+/* PROFILE */
+
+.profile-link {
+  margin-left: 8px;
+
+  border: 1px solid rgba(201, 169, 104, 0.35);
+}
+
+
+/* =========================================
+   MOBILE BUTTON
+========================================= */
+
+.menu-button {
+  display: none;
+
+  width: 43px;
+  height: 43px;
+
+  padding: 9px;
+
+  border: 1px solid rgba(201, 169, 104, 0.35);
+
+  border-radius: 8px;
+
+  background: rgba(30, 63, 56, 0.45);
+
+  cursor: pointer;
+}
+
+.menu-button span {
+  display: block;
+
+  width: 100%;
+  height: 2px;
+
+  margin: 5px 0;
+
+  background: #d5b56a;
+
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
+}
+
+
+/* HAMBURGER ANIMATION */
+
+.menu-button.open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.menu-button.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-button.open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+
+/* =========================================
+   MOBILE MENU
+========================================= */
+
+.mobile-menu {
+  display: none;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 850px) {
+
+  .duoclash-navbar {
+    padding: 0 4%;
+  }
+
+  .navbar-links {
+    gap: 2px;
+  }
+
+  .nav-link {
+    padding: 9px 12px;
+
+    font-size: 13px;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+
+  .duoclash-navbar {
+    height: 70px;
+
+    padding: 0 5%;
+  }
+
+
+  /* Hide desktop links */
+
+  .navbar-links {
+    display: none;
+  }
+
+
+  /* Show hamburger */
+
+  .menu-button {
+    display: block;
+  }
+
+
+  /* Logo */
+
+  .duoclash-logo img {
+    width: 42px;
+    height: 42px;
+  }
+
+  .logo-name {
+    font-size: 17px;
+  }
+
+  .logo-tagline {
+    font-size: 6px;
+  }
+
+
+  /* Mobile dropdown */
+
+  .mobile-menu {
+    position: absolute;
+
+    top: 70px;
+    left: 0;
+
+    width: 100%;
+
+    padding: 14px 5% 20px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 6px;
+
+    background: rgba(10, 29, 43, 0.98);
+
+    border-bottom: 1px solid rgba(201, 169, 104, 0.25);
+
+    box-shadow:
+      0 15px 30px rgba(0, 0, 0, 0.25);
+
+    transform: translateY(-15px);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition:
+      opacity 0.25s ease,
+      transform 0.25s ease,
+      visibility 0.25s ease;
+  }
+
+
+  .mobile-menu-open {
+    transform: translateY(0);
+
+    opacity: 1;
+
+    visibility: visible;
+  }
+
+
+  .mobile-nav-link {
+    padding: 14px 16px;
+
+    color: #c9a968;
+
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    border-radius: 8px;
+
+    border-left: 2px solid transparent;
+
+    transition:
+      color 0.25s ease,
+      background 0.25s ease,
+      border-color 0.25s ease,
+      padding-left 0.25s ease;
+  }
+
+
+  .mobile-nav-link:hover,
+  .mobile-nav-link.active {
+    color: #f0d18b;
+
+    background: rgba(50, 91, 76, 0.25);
+
+    border-left-color: #d5b56a;
+
+    padding-left: 22px;
+  }
+
+}
+
+
+/* =========================================
+   SMALL PHONES
+========================================= */
+
+@media (max-width: 400px) {
+
+  .logo-tagline {
+    display: none;
+  }
+
+  .logo-name {
+    font-size: 16px;
+  }
+
+}
