@@ -9,7 +9,7 @@ import './Home.css';
    Automatically finds your image anywhere inside src/assets whose file
    name contains "background" (e.g. src/assets/images/background.png).
    No path to maintain. To use a fixed path instead, replace these two
-   lines with:  import bgImage from '../assets/images/background.png';
+   lines with:  import bgImage from '../assets/images/background.png'; 
 ------------------------------------------------------------------- */
 const backgroundFiles = import.meta.glob('/src/assets/**/*background*.{png,jpg,jpeg,webp}', {
   eager: true,

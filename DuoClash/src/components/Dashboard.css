@@ -1,0 +1,1196 @@
+/* ==========================================================================
+DUOCLASH DASHBOARD - FANTASY COMPETITIVE CODING COMMAND CENTER
+========================================================================== */
+
+:root {
+--duo-navy-bg: #070d19;
+--duo-navy-card: rgba(11, 20, 36, 0.72);
+--duo-navy-card-hover: rgba(15, 27, 48, 0.85);
+--duo-border: rgba(212, 175, 55, 0.22);
+--duo-border-light: rgba(255, 255, 255, 0.08);
+
+--duo-gold: #d4af37;
+--duo-gold-light: #f3e5ab;
+--duo-gold-glow: rgba(212, 175, 55, 0.25);
+
+--duo-orange: #f97316;
+--duo-orange-hover: #ea580c;
+--duo-orange-glow: rgba(249, 115, 22, 0.35);
+
+--duo-green: #10b981;
+--duo-green-glow: rgba(16, 185, 129, 0.25);
+
+--duo-red: #ef4444;
+--duo-red-glow: rgba(239, 68, 68, 0.25);
+
+--duo-text-main: #f8fafc;
+--duo-text-muted: #94a3b8;
+
+--duo-font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+--duo-radius-lg: 16px;
+--duo-radius-md: 10px;
+--duo-radius-sm: 6px;
+}
+
+/* Base Layout & Viewport */
+.dashboard-viewport {
+width: 100%;
+min-height: 100vh;
+background-color: var(--duo-navy-bg);
+background-image:
+radial-gradient(circle at 15% 15%, rgba(212, 175, 55, 0.05) 0%, transparent 40%),
+radial-gradient(circle at 85% 85%, rgba(249, 115, 22, 0.04) 0%, transparent 40%),
+linear-gradient(to bottom, #030712, #070d19);
+color: var(--duo-text-main);
+font-family: var(--duo-font-family);
+padding: 2rem 1.5rem 4rem 1.5rem;
+box-sizing: border-box;
+}
+
+.dashboard-wrapper {
+max-width: 1380px;
+margin: 0 auto;
+display: flex;
+flex-direction: column;
+gap: 1.75rem;
+}
+
+/* Universal DUOCLASH Glassmorphic Card */
+.duo-card {
+background: var(--duo-navy-card);
+backdrop-filter: blur(16px);
+-webkit-backdrop-filter: blur(16px);
+border: 1px solid var(--duo-border);
+border-radius: var(--duo-radius-lg);
+padding: 1.5rem;
+box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+position: relative;
+overflow: hidden;
+}
+
+.duo-card:hover {
+border-color: rgba(212, 175, 55, 0.38);
+}
+
+/* Typography & Helpers */
+.gold-text { color: var(--duo-gold); }
+.green-text { color: var(--duo-green); }
+.red-text { color: var(--duo-red); }
+.orange-text { color: var(--duo-orange); }
+.gold-icon { color: var(--duo-gold); }
+.orange-icon { color: var(--duo-orange); }
+
+.card-header {
+display: flex;
+align-items: center;
+gap: 0.6rem;
+margin-bottom: 1.1rem;
+}
+
+.card-header h3 {
+margin: 0;
+font-size: 0.95rem;
+font-weight: 800;
+letter-spacing: 1.2px;
+text-transform: uppercase;
+color: var(--duo-text-main);
+}
+
+.space-between {
+justify-content: space-between;
+}
+
+.title-with-icon {
+display: flex;
+align-items: center;
+gap: 0.6rem;
+}
+
+.card-sub-info {
+margin: -0.6rem 0 1rem 0;
+font-size: 0.78rem;
+color: var(--duo-text-muted);
+}
+
+/* ==========================================================================
+
+HERO / PLAYER COMMAND CENTER
+========================================================================== */
+.dashboard-hero {
+display: grid;
+grid-template-columns: 1fr auto;
+gap: 2rem;
+align-items: center;
+padding: 2rem;
+background: linear-gradient(135deg, rgba(11, 20, 36, 0.9) 0%, rgba(15, 27, 48, 0.7) 100%);
+border: 1px solid var(--duo-border);
+}
+
+.hero-profile-container {
+display: flex;
+align-items: center;
+gap: 1.5rem;
+}
+
+.avatar-wrapper {
+position: relative;
+flex-shrink: 0;
+}
+
+.player-avatar {
+width: 90px;
+height: 90px;
+border-radius: 50%;
+object-fit: cover;
+border: 2px solid var(--duo-gold);
+box-shadow: 0 0 20px var(--duo-gold-glow);
+}
+
+.level-badge {
+position: absolute;
+bottom: -6px;
+left: 50%;
+transform: translateX(-50%);
+background: linear-gradient(135deg, var(--duo-orange), #c2410c);
+color: #ffffff;
+font-size: 0.68rem;
+font-weight: 800;
+padding: 0.2rem 0.6rem;
+border-radius: 20px;
+letter-spacing: 1px;
+box-shadow: 0 2px 8px var(--duo-orange-glow);
+white-space: nowrap;
+}
+
+.hero-text-info {
+display: flex;
+flex-direction: column;
+gap: 0.35rem;
+width: 100%;
+}
+
+.welcome-tag {
+display: flex;
+align-items: center;
+gap: 0.4rem;
+font-size: 0.68rem;
+font-weight: 800;
+letter-spacing: 2px;
+color: var(--duo-gold-light);
+text-transform: uppercase;
+}
+
+.hero-title {
+margin: 0;
+font-size: clamp(1.4rem, 2.5vw, 1.9rem);
+font-weight: 900;
+letter-spacing: 1px;
+color: #ffffff;
+line-height: 1.2;
+}
+
+.highlight-gold {
+color: var(--duo-gold);
+text-shadow: 0 0 12px var(--duo-gold-glow);
+}
+
+.hero-subtitle {
+margin: 0 0 0.5rem 0;
+font-size: 0.85rem;
+color: var(--duo-text-muted);
+}
+
+/* XP Bar */
+.xp-progress-block {
+display: flex;
+flex-direction: column;
+gap: 0.35rem;
+max-width: 380px;
+}
+
+.xp-labels {
+display: flex;
+justify-content: space-between;
+font-size: 0.72rem;
+font-weight: 700;
+color: var(--duo-gold-light);
+letter-spacing: 0.5px;
+}
+
+.xp-bar-track {
+width: 100%;
+height: 8px;
+background: rgba(255, 255, 255, 0.08);
+border-radius: 10px;
+overflow: hidden;
+border: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.xp-bar-fill {
+height: 100%;
+background: linear-gradient(90deg, var(--duo-gold), var(--duo-orange));
+box-shadow: 0 0 10px var(--duo-orange-glow);
+border-radius: 10px;
+transition: width 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Quick Stats Bar */
+.hero-quick-stats {
+display: flex;
+align-items: center;
+gap: 1.5rem;
+background: rgba(7, 13, 25, 0.6);
+padding: 1.1rem 1.5rem;
+border-radius: var(--duo-radius-md);
+border: 1px solid var(--duo-border-light);
+}
+
+.quick-stat-box {
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 0.2rem;
+min-width: 100px;
+}
+
+.stat-label {
+font-size: 0.65rem;
+font-weight: 800;
+letter-spacing: 1.5px;
+color: var(--duo-text-muted);
+text-transform: uppercase;
+}
+
+.stat-value {
+font-size: 1.4rem;
+font-weight: 900;
+letter-spacing: 1px;
+}
+
+.rank-tag {
+display: flex;
+align-items: center;
+gap: 0.25rem;
+font-size: 0.68rem;
+font-weight: 700;
+}
+
+.rank-tag.up { color: var(--duo-green); }
+.rank-tag.down { color: var(--duo-red); }
+
+.sub-tag {
+font-size: 0.68rem;
+color: var(--duo-text-muted);
+}
+
+.quick-stat-divider {
+width: 1px;
+height: 38px;
+background: var(--duo-border-light);
+}
+
+/* ==========================================================================
+2. PRIMARY BATTLE CTA
+========================================================================== */
+.battle-cta-banner {
+background: linear-gradient(135deg, rgba(249, 115, 22, 0.12) 0%, rgba(10, 20, 30, 0.8) 100%);
+border: 1px solid rgba(249, 115, 22, 0.35);
+}
+
+.cta-content {
+display: flex;
+align-items: center;
+justify-content: space-between;
+gap: 1.5rem;
+flex-wrap: wrap;
+}
+
+.cta-header {
+display: flex;
+align-items: center;
+gap: 1rem;
+}
+
+.cta-icon {
+color: var(--duo-orange);
+filter: drop-shadow(0 0 8px var(--duo-orange-glow));
+}
+
+.cta-header h2 {
+margin: 0;
+font-size: 1.25rem;
+font-weight: 900;
+letter-spacing: 1.5px;
+color: #ffffff;
+}
+
+.cta-header p {
+margin: 0.2rem 0 0 0;
+font-size: 0.82rem;
+color: var(--duo-text-muted);
+}
+
+.cta-action-buttons {
+display: flex;
+align-items: center;
+gap: 0.85rem;
+flex-wrap: wrap;
+}
+
+/* BUTTON STYLES */
+.btn-duo-primary,
+.btn-duo-secondary,
+.btn-duo-ghost {
+display: inline-flex;
+align-items: center;
+justify-content: center;
+gap: 0.5rem;
+padding: 0.75rem 1.4rem;
+font-size: 0.82rem;
+font-weight: 800;
+letter-spacing: 1px;
+border-radius: var(--duo-radius-md);
+cursor: pointer;
+transition: all 0.25s ease;
+text-transform: uppercase;
+border: none;
+text-decoration: none;
+}
+
+.btn-duo-primary {
+background: linear-gradient(135deg, var(--duo-orange) 0%, #c2410c 100%);
+color: #ffffff;
+box-shadow: 0 4px 15px var(--duo-orange-glow);
+border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.btn-duo-primary:hover {
+transform: translateY(-2px);
+box-shadow: 0 6px 20px var(--duo-orange-glow);
+background: linear-gradient(135deg, #fb923c 0%, var(--duo-orange-hover) 100%);
+}
+
+.btn-duo-secondary {
+background: rgba(212, 175, 55, 0.12);
+color: var(--duo-gold-light);
+border: 1px solid var(--duo-gold);
+}
+
+.btn-duo-secondary:hover {
+background: rgba(212, 175, 55, 0.25);
+color: #ffffff;
+box-shadow: 0 0 15px var(--duo-gold-glow);
+transform: translateY(-2px);
+}
+
+.btn-duo-ghost {
+background: rgba(255, 255, 255, 0.05);
+color: var(--duo-text-main);
+border: 1px solid var(--duo-border-light);
+}
+
+.btn-duo-ghost:hover {
+background: rgba(255, 255, 255, 0.12);
+border-color: rgba(255, 255, 255, 0.25);
+transform: translateY(-2px);
+}
+
+.full-width {
+width: 100%;
+}
+
+/* ==========================================================================
+3. PLAYER STATISTICS GRID
+========================================================================== */
+.dashboard-stats-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+gap: 1rem;
+}
+
+.stat-card {
+display: flex;
+align-items: center;
+gap: 1rem;
+padding: 1.15rem;
+}
+
+.stat-icon-wrap {
+width: 44px;
+height: 44px;
+border-radius: var(--duo-radius-md);
+display: flex;
+align-items: center;
+justify-content: center;
+flex-shrink: 0;
+}
+
+.stat-icon-wrap.gold { background: rgba(212, 175, 55, 0.15); color: var(--duo-gold); border: 1px solid rgba(212, 175, 55, 0.3); }
+.stat-icon-wrap.green { background: rgba(16, 185, 129, 0.15); color: var(--duo-green); border: 1px solid rgba(16, 185, 129, 0.3); }
+.stat-icon-wrap.red { background: rgba(239, 68, 68, 0.15); color: var(--duo-red); border: 1px solid rgba(239, 68, 68, 0.3); }
+.stat-icon-wrap.orange { background: rgba(249, 115, 22, 0.15); color: var(--duo-orange); border: 1px solid rgba(249, 115, 22, 0.3); }
+
+.stat-info {
+display: flex;
+flex-direction: column;
+}
+
+.stat-title {
+font-size: 0.65rem;
+font-weight: 800;
+letter-spacing: 1px;
+color: var(--duo-text-muted);
+}
+
+.stat-num {
+margin: 0.1rem 0;
+font-size: 1.3rem;
+font-weight: 900;
+letter-spacing: 0.5px;
+}
+
+.stat-meta {
+font-size: 0.68rem;
+color: var(--duo-text-muted);
+opacity: 0.8;
+}
+
+/* ==========================================================================
+MAIN TWO-COLUMN LAYOUT
+========================================================================== */
+.dashboard-grid-layout {
+display: grid;
+grid-template-columns: 1fr 340px;
+gap: 1.5rem;
+}
+
+.dashboard-col {
+display: flex;
+flex-direction: column;
+gap: 1.5rem;
+}
+
+.grid-sub-duo {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 1.25rem;
+}
+
+/* 4 & 5. STREAK & LIVE RANKING PANELS */
+.streak-body, .live-rank-body {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+text-align: center;
+gap: 0.6rem;
+padding: 0.5rem 0;
+}
+
+.streak-count-box {
+display: flex;
+align-items: baseline;
+gap: 0.4rem;
+}
+
+.streak-fire { font-size: 2rem; }
+.streak-value { font-size: 2.2rem; font-weight: 900; color: var(--duo-orange); }
+.streak-label { font-size: 0.85rem; font-weight: 800; color: var(--duo-gold-light); }
+
+.streak-desc {
+margin: 0;
+font-size: 0.78rem;
+color: var(--duo-text-muted);
+}
+
+.streak-pills {
+display: flex;
+gap: 0.4rem;
+margin-top: 0.4rem;
+}
+
+.streak-pill {
+width: 24px;
+height: 6px;
+border-radius: 4px;
+background: rgba(255, 255, 255, 0.1);
+}
+
+.streak-pill.active {
+background: var(--duo-orange);
+box-shadow: 0 0 8px var(--duo-orange-glow);
+}
+
+/* Live Ranking Panel */
+.live-status-indicator {
+display: flex;
+align-items: center;
+gap: 0.4rem;
+font-size: 0.7rem;
+font-weight: 800;
+color: var(--duo-green);
+letter-spacing: 1px;
+}
+
+.pulse-dot {
+width: 8px;
+height: 8px;
+background-color: var(--duo-green);
+border-radius: 50%;
+box-shadow: 0 0 8px var(--duo-green-glow);
+animation: duoPulse 1.8s infinite;
+}
+
+@keyframes duoPulse {
+0% { transform: scale(0.95); opacity: 0.7; }
+50% { transform: scale(1.2); opacity: 1; }
+100% { transform: scale(0.95); opacity: 0.7; }
+}
+
+.update-time {
+font-size: 0.68rem;
+color: var(--duo-text-muted);
+}
+
+.live-rank-big {
+display: flex;
+align-items: baseline;
+color: var(--duo-gold);
+}
+
+.rank-hash { font-size: 1.5rem; font-weight: 700; }
+.rank-digit { font-size: 2.6rem; font-weight: 900; letter-spacing: -1px; }
+
+.rank-status-details {
+display: flex;
+flex-direction: column;
+gap: 0.2rem;
+}
+
+.movement-text.positive {
+font-size: 0.78rem;
+font-weight: 700;
+color: var(--duo-green);
+}
+
+.standing-note {
+font-size: 0.72rem;
+color: var(--duo-text-muted);
+}
+
+/* ==========================================================================
+10. RECENT DUELS
+========================================================================== */
+.card-subtitle-badge {
+font-size: 0.7rem;
+font-weight: 700;
+padding: 0.2rem 0.6rem;
+border-radius: 12px;
+background: rgba(255, 255, 255, 0.06);
+color: var(--duo-text-muted);
+}
+
+.duels-list {
+display: flex;
+flex-direction: column;
+gap: 0.65rem;
+}
+
+.duel-row {
+display: grid;
+grid-template-columns: 110px 1.2fr 1.5fr 110px auto;
+align-items: center;
+gap: 1rem;
+padding: 0.85rem 1rem;
+background: rgba(7, 13, 25, 0.5);
+border-radius: var(--duo-radius-md);
+border: 1px solid var(--duo-border-light);
+transition: all 0.2s ease;
+}
+
+.duel-row:hover {
+background: rgba(15, 27, 48, 0.7);
+border-color: rgba(212, 175, 55, 0.2);
+}
+
+.duel-row.win { border-left: 3px solid var(--duo-green); }
+.duel-row.loss { border-left: 3px solid var(--duo-red); }
+
+.duel-result-tag {
+display: flex;
+align-items: center;
+gap: 0.35rem;
+font-size: 0.72rem;
+font-weight: 800;
+letter-spacing: 1px;
+}
+
+.mini-avatar {
+width: 32px;
+height: 32px;
+border-radius: 50%;
+object-fit: cover;
+border: 1px solid var(--duo-border);
+}
+
+.duel-opponent {
+display: flex;
+align-items: center;
+gap: 0.6rem;
+}
+
+.opponent-label {
+font-size: 0.82rem;
+font-weight: 700;
+display: block;
+}
+
+.match-id {
+font-size: 0.65rem;
+color: var(--duo-text-muted);
+}
+
+.duel-problem {
+display: flex;
+flex-direction: column;
+gap: 0.2rem;
+}
+
+.problem-title {
+font-size: 0.82rem;
+font-weight: 600;
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
+}
+
+.diff-tag {
+font-size: 0.62rem;
+font-weight: 800;
+text-transform: uppercase;
+width: fit-content;
+}
+
+.diff-tag.easy { color: var(--duo-green); }
+.diff-tag.medium { color: var(--duo-orange); }
+.diff-tag.hard { color: var(--duo-red); }
+
+.duel-stats-meta {
+display: flex;
+flex-direction: column;
+align-items: flex-end;
+}
+
+.score-val { font-size: 0.82rem; font-weight: 800; }
+.time-val { font-size: 0.68rem; color: var(--duo-text-muted); }
+
+.xp-badge {
+font-size: 0.7rem;
+font-weight: 800;
+color: var(--duo-gold-light);
+background: rgba(212, 175, 55, 0.12);
+padding: 0.2rem 0.5rem;
+border-radius: 4px;
+border: 1px solid rgba(212, 175, 55, 0.25);
+}
+
+/* ==========================================================================
+7 & 8. GLOBAL RANKINGS & FILTERS
+========================================================================== */
+.leaderboard-header {
+flex-wrap: wrap;
+gap: 1rem;
+}
+
+.ranking-filter-pills {
+display: flex;
+gap: 0.35rem;
+background: rgba(7, 13, 25, 0.6);
+padding: 0.25rem;
+border-radius: var(--duo-radius-md);
+border: 1px solid var(--duo-border-light);
+}
+
+.filter-btn {
+background: transparent;
+border: none;
+color: var(--duo-text-muted);
+font-size: 0.68rem;
+font-weight: 800;
+padding: 0.35rem 0.75rem;
+border-radius: var(--duo-radius-sm);
+cursor: pointer;
+transition: all 0.2s ease;
+letter-spacing: 0.5px;
+}
+
+.filter-btn.active {
+background: var(--duo-gold);
+color: #070d19;
+box-shadow: 0 0 10px var(--duo-gold-glow);
+}
+
+.leaderboard-table-wrapper {
+overflow-x: auto;
+}
+
+.duo-table {
+width: 100%;
+border-collapse: collapse;
+font-size: 0.82rem;
+text-align: left;
+}
+
+.duo-table th {
+font-size: 0.65rem;
+font-weight: 800;
+letter-spacing: 1.2px;
+color: var(--duo-text-muted);
+padding: 0.75rem 0.85rem;
+border-bottom: 1px solid var(--duo-border-light);
+text-transform: uppercase;
+}
+
+.duo-table td {
+padding: 0.75rem 0.85rem;
+border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.duo-table tr:hover {
+background: rgba(255, 255, 255, 0.02);
+}
+
+.highlight-user-row {
+background: rgba(212, 175, 55, 0.08) !important;
+border-left: 3px solid var(--duo-gold);
+}
+
+.rank-cell { font-weight: 800; color: var(--duo-gold-light); }
+.inline-icon { margin-right: 0.3rem; vertical-align: middle; }
+
+.player-cell {
+display: flex;
+align-items: center;
+gap: 0.6rem;
+}
+
+.player-fullname { font-weight: 700; display: block; }
+.player-uname { font-size: 0.68rem; color: var(--duo-text-muted); }
+
+.you-badge {
+font-size: 0.6rem;
+font-weight: 800;
+color: var(--duo-gold);
+background: rgba(212, 175, 55, 0.2);
+padding: 0.1rem 0.35rem;
+border-radius: 3px;
+margin-left: 0.3rem;
+}
+
+.rating-cell { font-weight: 800; color: var(--duo-orange); }
+
+.card-footer-action {
+margin-top: 1rem;
+}
+
+/* ==========================================================================
+11. BATTLE HISTORY
+========================================================================== */
+.link-action-btn {
+display: inline-flex;
+align-items: center;
+gap: 0.25rem;
+background: transparent;
+border: none;
+color: var(--duo-gold);
+font-size: 0.72rem;
+font-weight: 800;
+cursor: pointer;
+letter-spacing: 0.5px;
+}
+
+.link-action-btn:hover {
+text-decoration: underline;
+}
+
+.history-cards-container {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+gap: 0.85rem;
+}
+
+.history-card {
+background: rgba(7, 13, 25, 0.5);
+border: 1px solid var(--duo-border-light);
+border-radius: var(--duo-radius-md);
+padding: 0.85rem;
+display: flex;
+flex-direction: column;
+gap: 0.5rem;
+}
+
+.history-head {
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.match-id-badge { font-size: 0.65rem; font-weight: 700; color: var(--duo-text-muted); }
+.match-date { font-size: 0.65rem; color: var(--duo-text-muted); }
+
+.history-body {
+display: flex;
+flex-direction: column;
+gap: 0.3rem;
+}
+
+.opponent-block { display: flex; align-items: center; gap: 0.4rem; font-size: 0.82rem; font-weight: 700; }
+.vs-tag { font-size: 0.6rem; color: var(--duo-gold); font-weight: 800; }
+
+.prob-name { font-size: 0.78rem; color: var(--duo-text-muted); }
+
+.match-outcome-block {
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-top: 0.2rem;
+padding-top: 0.4rem;
+border-top: 1px dashed rgba(255, 255, 255, 0.08);
+}
+
+.outcome-text { font-size: 0.72rem; font-weight: 800; }
+.outcome-text.win { color: var(--duo-green); }
+.outcome-text.loss { color: var(--duo-red); }
+
+.match-time { font-size: 0.68rem; color: var(--duo-text-muted); }
+
+/* ==========================================================================
+RIGHT COLUMN: SIDE PANELS
+========================================================================== */
+
+/* 6. RANKED NEIGHBORS */
+.neighbors-list {
+display: flex;
+flex-direction: column;
+gap: 0.5rem;
+}
+
+.neighbor-row {
+display: flex;
+align-items: center;
+gap: 0.6rem;
+padding: 0.55rem 0.75rem;
+background: rgba(7, 13, 25, 0.4);
+border-radius: var(--duo-radius-md);
+border: 1px solid transparent;
+}
+
+.neighbor-row.current-player {
+background: rgba(212, 175, 55, 0.1);
+border-color: var(--duo-gold);
+}
+
+.neighbor-rank {
+font-size: 0.78rem;
+font-weight: 800;
+color: var(--duo-gold-light);
+min-width: 28px;
+}
+
+.neighbor-info {
+display: flex;
+flex-direction: column;
+flex: 1;
+}
+
+.neighbor-name { font-size: 0.78rem; font-weight: 700; }
+.neighbor-xp { font-size: 0.65rem; color: var(--duo-text-muted); }
+
+.you-pill {
+font-size: 0.55rem;
+font-weight: 900;
+background: var(--duo-gold);
+color: #070d19;
+padding: 0.05rem 0.25rem;
+border-radius: 3px;
+margin-left: 0.2rem;
+}
+
+.neighbor-rating { font-size: 0.8rem; font-weight: 800; color: var(--duo-orange); }
+
+/* 12. ACHIEVEMENTS */
+.achievement-count {
+font-size: 0.68rem;
+font-weight: 700;
+color: var(--duo-gold-light);
+}
+
+.achievements-list {
+display: flex;
+flex-direction: column;
+gap: 0.75rem;
+}
+
+.achievement-item {
+display: flex;
+gap: 0.75rem;
+align-items: flex-start;
+padding: 0.6rem;
+border-radius: var(--duo-radius-md);
+background: rgba(7, 13, 25, 0.4);
+}
+
+.achievement-item.locked { opacity: 0.5; filter: grayscale(0.8); }
+
+.ach-icon-box {
+width: 32px;
+height: 32px;
+border-radius: var(--duo-radius-sm);
+background: rgba(212, 175, 55, 0.15);
+color: var(--duo-gold);
+display: flex;
+align-items: center;
+justify-content: center;
+flex-shrink: 0;
+}
+
+.ach-details {
+display: flex;
+flex-direction: column;
+gap: 0.2rem;
+width: 100%;
+}
+
+.ach-top {
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.ach-name { font-size: 0.78rem; font-weight: 800; }
+.ach-pct { font-size: 0.65rem; font-weight: 700; color: var(--duo-gold-light); }
+
+.ach-desc { margin: 0; font-size: 0.68rem; color: var(--duo-text-muted); }
+
+.ach-progress-bar {
+width: 100%;
+height: 4px;
+background: rgba(255, 255, 255, 0.1);
+border-radius: 4px;
+overflow: hidden;
+margin-top: 0.2rem;
+}
+
+.ach-progress-fill {
+height: 100%;
+background: var(--duo-gold);
+}
+
+/* 13. CLAN PREVIEW */
+.clan-rank-badge {
+font-size: 0.65rem;
+font-weight: 800;
+color: var(--duo-gold);
+background: rgba(212, 175, 55, 0.15);
+padding: 0.2rem 0.5rem;
+border-radius: 4px;
+border: 1px solid rgba(212, 175, 55, 0.25);
+}
+
+.clan-body {
+display: flex;
+flex-direction: column;
+gap: 1rem;
+}
+
+.clan-main-info { display: flex; flex-direction: column; gap: 0.1rem; }
+.clan-title { margin: 0; font-size: 1.1rem; font-weight: 900; color: #ffffff; }
+.clan-members { font-size: 0.72rem; color: var(--duo-text-muted); }
+
+.clan-stats-grid {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 0.75rem;
+background: rgba(7, 13, 25, 0.5);
+padding: 0.75rem;
+border-radius: var(--duo-radius-md);
+}
+
+.c-stat { display: flex; flex-direction: column; }
+.c-label { font-size: 0.6rem; font-weight: 800; color: var(--duo-text-muted); }
+.c-val { font-size: 0.88rem; font-weight: 800; }
+
+.empty-clan-state {
+text-align: center;
+font-size: 0.8rem;
+color: var(--duo-text-muted);
+}
+
+.clan-actions {
+display: flex;
+gap: 0.5rem;
+margin-top: 0.75rem;
+}
+
+/* 14. QUICK PROFILE PANEL */
+.profile-quick-body {
+display: flex;
+flex-direction: column;
+gap: 1rem;
+}
+
+.profile-quick-user {
+display: flex;
+align-items: center;
+gap: 0.75rem;
+}
+
+.profile-quick-avatar {
+width: 44px;
+height: 44px;
+border-radius: 50%;
+object-fit: cover;
+border: 1px solid var(--duo-gold);
+}
+
+.p-name { margin: 0; font-size: 0.9rem; font-weight: 800; }
+.p-uname { font-size: 0.72rem; color: var(--duo-text-muted); }
+
+.profile-quick-badges {
+display: flex;
+gap: 0.5rem;
+}
+
+.p-badge {
+font-size: 0.68rem;
+font-weight: 800;
+padding: 0.25rem 0.6rem;
+border-radius: 4px;
+background: rgba(255, 255, 255, 0.08);
+}
+
+.p-badge.gold {
+background: rgba(212, 175, 55, 0.15);
+color: var(--duo-gold);
+}
+
+/* Loading & Empty States */
+.dashboard-loading-viewport {
+width: 100vw;
+height: 100vh;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+gap: 1rem;
+background: var(--duo-navy-bg);
+color: var(--duo-gold-light);
+font-family: var(--duo-font-family);
+}
+
+.spinner-icon {
+color: var(--duo-gold);
+animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+from { transform: rotate(0deg); }
+to { transform: rotate(360deg); }
+}
+
+.empty-state-box {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+padding: 2rem;
+color: var(--duo-text-muted);
+gap: 0.5rem;
+font-size: 0.85rem;
+}
+
+/* ==========================================================================
+RESPONSIVE DESIGN (BREAKPOINTS)
+========================================================================== */
+
+@media (max-width: 1120px) {
+.dashboard-grid-layout {
+grid-template-columns: 1fr;
+}
+}
+
+@media (max-width: 860px) {
+.dashboard-hero {
+grid-template-columns: 1fr;
+text-align: center;
+}
+
+.hero-profile-container {
+flex-direction: column;
+text-align: center;
+}
+
+.xp-progress-block {
+max-width: 100%;
+}
+
+.hero-quick-stats {
+width: 100%;
+justify-content: space-around;
+box-sizing: border-box;
+}
+
+.grid-sub-duo {
+grid-template-columns: 1fr;
+}
+
+.duel-row {
+grid-template-columns: 1fr 1fr;
+gap: 0.5rem;
+}
+}
+
+@media (max-width: 580px) {
+.dashboard-viewport {
+padding: 1rem 0.75rem 3rem 0.75rem;
+}
+
+.hero-quick-stats {
+flex-direction: column;
+gap: 0.8rem;
+}
+
+.quick-stat-divider {
+width: 100%;
+height: 1px;
+}
+
+.cta-content {
+flex-direction: column;
+align-items: stretch;
+text-align: center;
+}
+
+.cta-header {
+flex-direction: column;
+}
+
+.cta-action-buttons {
+flex-direction: column;
+width: 100%;
+}
+
+.cta-action-buttons button {
+width: 100%;
+}
+
+.duel-row {
+grid-template-columns: 1fr;
+}
+
+.ranking-filter-pills {
+width: 100%;
+overflow-x: auto;
+}
+}

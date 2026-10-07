@@ -52,12 +52,12 @@ function Navbar() {
         </NavLink>
 
         <NavLink
-          to="/leaderboard"
+          to="/dashboard"
           className={({ isActive }) =>
             isActive ? "nav-link active" : "nav-link"
           }
         >
-          Leaderboard
+          Dashboard
         </NavLink>
 
         <NavLink
