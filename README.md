@@ -1,287 +1,486 @@
 <div align="center">
 
-<img src="docs/banner.svg" alt="DUOCLASH - Two Minds. One Battle." width="100%" />
+<!-- HERO -->
+
+<img src="docs/banner.svg" alt="DuoClash — Two Minds. One Battle." width="100%" />
+
+<br />
+
+# ⚔️ DUOCLASH
+
+### **Two Minds. One Battle.**
+
+**Challenge a friend. Get the same DSA problem. Race the clock. Claim the victory.**
 
 <br />
 
 <a href="https://github.com/Ruchitra-Jasmatiya/DuoClash">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&duration=3200&pause=900&color=F2B447&center=true&vCenter=true&width=640&lines=Two+Minds.+One+Battle.;Solve+the+same+DSA+problem.;Code+faster.+Win+the+battle.;Build+your+clan.+Climb+the+leaderboard." alt="Typing animation" />
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=21&duration=3000&pause=800&color=F2B447&center=true&vCenter=true&width=700&lines=Two+Minds.+One+Battle.;Solve+the+same+DSA+problem.;Code+faster.+Think+smarter.;Challenge+your+rival.;Climb+the+leaderboard." alt="DuoClash animated typing banner" />
 </a>
+
+<br /><br />
+
+<img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React" />
+<img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite" />
+<img src="https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=reactrouter&logoColor=white" alt="React Router" />
+<img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript" />
+<img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3" />
+<img src="https://img.shields.io/badge/Supabase_Realtime-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white" alt="Supabase" />
 
 <br />
 
-![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
-![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=reactrouter&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-![Supabase](https://img.shields.io/badge/Supabase_Realtime-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white)
+<img src="https://img.shields.io/badge/status-in%20development-f2b447?style=flat-square" alt="Status" />
+<img src="https://img.shields.io/badge/license-MIT-3ddc84?style=flat-square" alt="MIT License" />
+<img src="https://img.shields.io/badge/PRs-welcome-3ddc84?style=flat-square" alt="Pull Requests Welcome" />
 
-![Status](https://img.shields.io/badge/status-in%20development-f2b447?style=flat-square)
-![License](https://img.shields.io/badge/license-MIT-3ddc84?style=flat-square)
-![PRs](https://img.shields.io/badge/PRs-welcome-3ddc84?style=flat-square)
+<br /><br />
 
-**Challenge a friend. Get the same DSA problem. Race the clock. Claim the victory.**
-
-[Preview](#-preview) • [Features](#-features) • [How It Works](#-how-it-works) • [Architecture](#-architecture) • [Getting Started](#-getting-started) • [Roadmap](#-roadmap)
+<a href="#-preview">Preview</a> • <a href="#-features">Features</a> • <a href="#-how-it-works">How It Works</a> • <a href="#-architecture">Architecture</a> • <a href="#-getting-started">Getting Started</a> • <a href="#-roadmap">Roadmap</a>
 
 </div>
 
 ---
 
-## ⚔️ What is DUOCLASH?
+# ⚔️ What is DUOCLASH?
 
-**DUOCLASH** is a real-time, 1v1 **DSA coding battle arena**. Two players enter the same battleground, receive the **same data structures and algorithms problem**, and race to pass every test case first. Win battles to earn XP, climb the leaderboard, and build a **clan** with other students on campus.
+**DuoClash** is a competitive **1v1 DSA coding battle platform** designed to turn traditional DSA practice into an interactive and competitive experience.
 
-> Practising DSA alone is slow. Practising it against a rival is addictive.
+Two players enter the same battleground, receive the **same programming challenge**, and race against the clock to solve it.
+
+Instead of practising DSA alone, DuoClash adds:
+
+* ⚔️ Head-to-head competition
+* 🧠 Real problem-solving pressure
+* ⏱️ Time-based challenges
+* 🏆 Competitive progression
+* 👥 Social and clan-based interaction
+* 📊 Leaderboard-driven motivation
+
+> **Practising DSA alone is preparation. Practising it against a rival is a battle.**
 
 ---
 
-## 🖼️ Preview
+# 🏰 The Idea Behind DuoClash
+
+Traditional DSA preparation can become repetitive:
+
+```text
+Open Problem
+     ↓
+Solve
+     ↓
+Check Answer
+     ↓
+Next Problem
+     ↓
+Repeat...
+```
+
+DuoClash changes the experience:
+
+```text
+        ⚔️ DUOCLASH
+             │
+       ┌─────┴─────┐
+       │           │
+    Player A    Player B
+       │           │
+       └─────┬─────┘
+             ↓
+      Same DSA Problem
+             ↓
+        Race the Clock
+             ↓
+       Submit Solution
+             ↓
+      🏆 Battle Result
+             ↓
+       XP / Leaderboard
+```
+
+The goal is simple:
+
+### **Make DSA practice feel like a game.**
+
+---
+
+# 🖼️ Preview
 
 <div align="center">
 
-<img src="docs/preview.png" alt="DUOCLASH home page preview" width="85%" />
+<img src="docs/preview.png" alt="DuoClash application preview" width="92%" />
 
-<sub>Fantasy battleground meets competitive coding: hero, How It Works journey, clan hub and Top Duelists.</sub>
+<br /><br />
+
+<i>Fantasy battleground meets competitive programming.</i>
 
 </div>
 
----
-
-## ✨ Features
-
-| | Feature | Status |
-|---|---|---|
-| 🏰 | Cinematic fantasy landing page, fully responsive (desktop, tablet, mobile) | ✅ Done |
-| 🧭 | **How It Works** journey with torn-parchment design and hover animations | ✅ Done |
-| 🛡️ | **Clan hub** with a floating flag and a live online roster | ✅ Done |
-| 🟢 | **Live presence**: see who is online and how many people are on the site | ✅ Done |
-| 👑 | **Top Duelists** leaderboard preview | ✅ Done (static data) |
-| ⚔️ | 1v1 battle rooms with shareable battle links | 🚧 In progress |
-| ⏱️ | Same DSA problem for both players, live timer | 🚧 In progress |
-| 🧪 | Code editor and automatic test-case judging | 🗺️ Planned |
-| 🏆 | XP, ranks and rewards | 🗺️ Planned |
-| 👥 | Create / join clans, clan battles | 🗺️ Planned |
+> **Tip:** Keep `preview.png` inside the repository at `docs/preview.png`.
+> GitHub renders local repository images more reliably than random image-hosting URLs.
 
 ---
 
-## 🧭 How It Works
+# ✨ Features
+
+|     | Feature                                      |     Status     |
+| --- | -------------------------------------------- | :------------: |
+| 🏰  | Cinematic fantasy landing page               |     ✅ Done     |
+| 📱  | Responsive desktop, tablet and mobile design |     ✅ Done     |
+| 🧭  | Interactive How It Works journey             |     ✅ Done     |
+| 🛡️ | Clan hub with floating clan flag             |     ✅ Done     |
+| 🟢  | Live online presence                         |     ✅ Done     |
+| 👑  | Top Duelists leaderboard preview             |     ✅ Done     |
+| ⚔️  | 1v1 battle rooms                             | 🚧 In Progress |
+| 🔗  | Shareable battle links                       | 🚧 In Progress |
+| ⏱️  | Synchronized battle timer                    | 🚧 In Progress |
+| 🧠  | Same DSA problem for both players            | 🚧 In Progress |
+| 🧪  | Code editor and automatic judging            |   🗺️ Planned  |
+| 🏆  | XP, ranks and rewards                        |   🗺️ Planned  |
+| 👥  | Create and join clans                        |   🗺️ Planned  |
+| ⚔️  | Clan vs Clan battles                         |   🗺️ Planned  |
+| 📚  | DSA problem library                          |   🗺️ Planned  |
+
+---
+
+# 🧭 How It Works
 
 ```mermaid
 flowchart LR
-    A(["Visit DUOCLASH"]) --> B{"Signed in?"}
-    B -- "No" --> C["Sign up / Log in"]
-    B -- "Yes" --> D["Home"]
-    C --> D
-    D --> E["Create Battle"]
-    D --> F["Join Battle with a link"]
-    E --> G["Share the battle link"]
-    G --> H["Rival joins the arena"]
-    F --> H
-    H --> I["Both get the same DSA problem"]
-    I --> J["Code against the clock"]
-    J --> K{"All test cases passed first?"}
-    K -- "Yes" --> L["Victory + XP reward"]
-    K -- "No" --> M["Rival wins, rematch?"]
-    L --> N["Leaderboard"]
-    M --> N
 
-    classDef action fill:#f2b447,stroke:#c98418,color:#2a1500;
-    classDef win fill:#3ddc84,stroke:#1c7a4f,color:#06210f;
-    class E,F action;
-    class L win;
+A(["🏠 Visit DuoClash"])
+--> B{"Signed In?"}
+
+B -->|No| C["🔐 Sign Up / Login"]
+B -->|Yes| D["🏰 Home"]
+
+C --> D
+
+D --> E["⚔️ Create Battle"]
+D --> F["🔗 Join Battle"]
+
+E --> G["📨 Share Battle Link"]
+G --> H["🛡️ Rival Joins"]
+
+F --> H
+
+H --> I["🧠 Same DSA Problem"]
+
+I --> J["⏱️ Race the Clock"]
+
+J --> K{"🏆 Who Solves First?"}
+
+K -->|Player A| L["🥇 Player A Wins"]
+K -->|Player B| M["🥇 Player B Wins"]
+
+L --> N["📊 Leaderboard"]
+M --> N
 ```
-
-### Five simple steps
-
-| Step | Title | What happens |
-|:---:|---|---|
-| **01** | Create / Join | Start a battle or join one using a battle link |
-| **02** | Enter Battleground | Both players enter the same battle |
-| **03** | Code & Solve | Solve the same DSA challenge against the clock |
-| **04** | Defeat Your Rival | Complete the challenge and win the battle |
-| **05** | Claim Your Reward | Victory unlocks your battle reward |
 
 ---
 
-## 🔁 Battle Lifecycle
+# 🗡️ Five Steps to Victory
+
+|  Step  | Stage                 | What Happens                               |
+| :----: | --------------------- | ------------------------------------------ |
+| **01** | 🏰 Create / Join      | Start a battle or join using a battle link |
+| **02** | ⚔️ Enter Battleground | Both players enter the same arena          |
+| **03** | 🧠 Code & Solve       | Solve the same DSA challenge               |
+| **04** | ⏱️ Race the Clock     | Submit before your rival                   |
+| **05** | 🏆 Claim Victory      | Win the battle and progress                |
+
+---
+
+# 🔁 Battle Lifecycle
 
 ```mermaid
 stateDiagram-v2
-    [*] --> Lobby
-    Lobby --> Ready: Rival joins
-    Ready --> Countdown: Both players ready
-    Countdown --> Coding: 3, 2, 1, GO
-    Coding --> Judging: Submit solution
-    Judging --> Coding: Some tests failed
-    Judging --> Finished: All tests passed
-    Coding --> Finished: Timer runs out
-    Finished --> [*]
+
+[*] --> Lobby
+
+Lobby --> Ready: Rival joins
+
+Ready --> Countdown: Both players ready
+
+Countdown --> Coding: 3... 2... 1... GO!
+
+Coding --> Judging: Submit solution
+
+Judging --> Coding: Tests failed
+
+Judging --> Finished: Tests passed
+
+Coding --> Finished: Timer expires
+
+Finished --> [*]
 ```
 
 ---
 
-## 🏗️ Architecture
+# 🏗️ Architecture
 
-### Battle flow (target design)
+## ⚔️ Target Battle Architecture
 
 ```mermaid
 sequenceDiagram
-    autonumber
-    actor A as Player A
-    actor B as Player B
-    participant S as DUOCLASH Server
-    participant J as Judge
 
-    A->>S: Create battle
-    S-->>A: Battle link
-    A->>B: Share link
-    B->>S: Join battle
-    S-->>A: Rival joined
-    S-->>A: Same DSA problem + timer
-    S-->>B: Same DSA problem + timer
-    par Both code in real time
-        A->>J: Submit solution
-    and
-        B->>J: Submit solution
-    end
-    J-->>S: Test case results
-    S-->>A: Result + XP
-    S-->>B: Result + XP
+autonumber
+
+actor A as Player A
+actor B as Player B
+
+participant S as DuoClash Server
+participant J as Judge
+
+A->>S: Create Battle
+S-->>A: Battle Link
+
+A->>B: Share Link
+
+B->>S: Join Battle
+
+S-->>A: Rival Joined
+S-->>B: Battle Ready
+
+S-->>A: Same DSA Problem
+S-->>B: Same DSA Problem
+
+S-->>A: Start Timer
+S-->>B: Start Timer
+
+par Player A
+    A->>J: Submit Solution
+and Player B
+    B->>J: Submit Solution
+end
+
+J-->>S: Test Results
+
+S-->>A: Battle Result
+S-->>B: Battle Result
+
+S-->>A: XP / Rank Update
+S-->>B: XP / Rank Update
 ```
 
-### Live presence (already built)
+---
 
-The clan hub and the leaderboard share **one** presence store, so both always show the same people and the same count.
+# 🟢 Live Presence
+
+DuoClash currently uses a shared presence system for the clan hub and leaderboard experience.
 
 ```mermaid
 flowchart TB
-    subgraph Browser["Visitor browser"]
-        H["Home.jsx"]
-        L["Leaderboard.jsx"]
-        P["usePresence.js<br/>shared store"]
-    end
 
-    H --> P
-    L --> P
-    P --> T{"Transport"}
-    T -- "Development" --> BC["BroadcastChannel<br/>(tabs in the same browser)"]
-    T -- "Production" --> SB["Supabase Realtime Presence<br/>(every visitor, any device)"]
-    BC --> P
-    SB --> P
+Browser["🌐 Visitor Browser"]
 
-    classDef store fill:#f2b447,stroke:#c98418,color:#2a1500;
-    class P store;
+Home["🏠 Home"]
+Leaderboard["👑 Leaderboard"]
+
+Presence["🟢 Shared Presence Store"]
+
+Transport{"Transport"}
+
+Broadcast["📡 BroadcastChannel<br/>Development"]
+
+Supabase["☁️ Supabase Realtime Presence<br/>Production"]
+
+Browser --> Home
+Browser --> Leaderboard
+
+Home --> Presence
+Leaderboard --> Presence
+
+Presence --> Transport
+
+Transport --> Broadcast
+Transport --> Supabase
+
+Broadcast --> Presence
+Supabase --> Presence
 ```
 
-- **Signed-in users** appear by name with an *Online* or *In Battle* status.
-- **Guests** are counted in the total ("12 online now · 3 guests") but are not listed.
-- A shared store with a short grace period keeps people from flickering offline when they change pages.
+### Presence behaviour
+
+* 🟢 Signed-in users can appear in the online roster.
+* ⚔️ Users can be represented with an active battle state.
+* 👤 Guests can contribute to the visitor count.
+* 🔄 Shared presence reduces unnecessary online/offline flickering while navigating.
 
 ---
 
-## 🛠️ Tech Stack
+# 🎮 DuoClash Experience
 
-| Layer | Tech |
-|---|---|
-| Frontend | React, Vite, React Router |
-| Styling | Plain CSS (separate `Home.css`), no UI framework |
-| Icons | [Lucide React](https://lucide.dev) |
-| Realtime presence | BroadcastChannel (dev) and Supabase Realtime Presence (production) |
-| Typography | Cinzel and Inter |
+```text
+┌──────────────────────────────────────────────┐
+│                 DUOCLASH                     │
+│                                              │
+│          ⚔️ TWO MINDS. ONE BATTLE.          │
+│                                              │
+│   ┌────────────┐       ┌────────────┐       │
+│   │  PLAYER A  │       │  PLAYER B  │       │
+│   │    🧑‍💻     │  VS   │    👨‍💻     │       │
+│   └────────────┘       └────────────┘       │
+│                                              │
+│        🧠 SAME DSA CHALLENGE                │
+│                                              │
+│             ⏱️ 09:42                        │
+│                                              │
+│        [       CODE HERE       ]             │
+│                                              │
+│             [ SUBMIT ⚔️ ]                   │
+│                                              │
+└──────────────────────────────────────────────┘
+```
 
 ---
 
-## 📁 Project Structure
+# 🛠️ Tech Stack
 
-> Folder names may differ slightly in your copy. Adjust to match.
+| Layer                | Technology                           |
+| -------------------- | ------------------------------------ |
+| ⚛️ Frontend          | React                                |
+| ⚡ Build Tool         | Vite                                 |
+| 🧭 Routing           | React Router                         |
+| 🎨 Styling           | Plain CSS                            |
+| 🖼️ UI Icons         | Lucide React                         |
+| 🟢 Realtime Presence | BroadcastChannel + Supabase Realtime |
+| 🔤 Typography        | Cinzel + Inter                       |
+| ☁️ Future Backend    | Supabase / Realtime services         |
+
+---
+
+# 📁 Project Structure
 
 ```text
 DuoClash/
+│
 ├── docs/
-│   ├── banner.svg               # README banner
-│   └── preview.png              # design preview
+│   ├── banner.svg
+│   └── preview.png
+│
 ├── public/
 │   └── images/
-│       └── clan-flag.png        # your clan flag artwork
+│       └── clan-flag.png
+│
 ├── src/
 │   ├── assets/
 │   │   └── images/
-│   │       └── background.png   # full-page HD background
-│   ├── Home.jsx                 # landing page
-│   ├── Home.css                 # landing page styles
-│   ├── usePresence.js           # shared "who is online" store
-│   ├── presenceSupabase.js      # real cross-device presence adapter
-│   ├── Battle.jsx               # battle arena (in progress)
-│   ├── Leaderboard.jsx          # leaderboard (in progress)
+│   │       └── background.png
+│   │
+│   ├── Home.jsx
+│   ├── Home.css
+│   ├── usePresence.js
+│   ├── presenceSupabase.js
+│   ├── Battle.jsx
+│   ├── Leaderboard.jsx
 │   └── main.jsx
+│
 ├── index.html
 ├── package.json
-└── README.md
+├── README.md
+└── LICENSE
+```
+
+> Folder names can change as the project grows. Update this section whenever the architecture changes.
+
+---
+
+# 🚀 Getting Started
+
+## Prerequisites
+
+* Node.js 18+
+* npm
+* Git
+
+## Clone the repository
+
+```bash
+git clone https://github.com/Ruchitra-Jasmatiya/DuoClash.git
+
+cd DuoClash
+```
+
+## Install dependencies
+
+```bash
+npm install
+```
+
+## Start development server
+
+```bash
+npm run dev
+```
+
+Then open:
+
+```text
+http://localhost:5173
 ```
 
 ---
 
-## 🚀 Getting Started
+# 🖼️ Project Artwork
 
-### Prerequisites
+Keep the visual assets inside the repository instead of relying on external image URLs.
 
-- [Node.js](https://nodejs.org) 18 or newer
-- npm
+| Asset                   | Location                           |
+| ----------------------- | ---------------------------------- |
+| 🏰 README Banner        | `docs/banner.svg`                  |
+| 🖼️ Application Preview | `docs/preview.png`                 |
+| 🏳️ Clan Flag           | `public/images/clan-flag.png`      |
+| 🌌 Background           | `src/assets/images/background.png` |
 
-### Install and run
+This makes the README more reliable when viewed from GitHub.
 
-```bash
-# 1. Clone
-git clone https://github.com/Ruchitra-Jasmatiya/DuoClash.git
-cd DuoClash
+---
 
-# 2. Install dependencies
-npm install
+# 🟢 Testing Live Presence
 
-# 3. Start the dev server
-npm run dev
-```
-
-Open **http://localhost:5173** in your browser.
-
-### Add your artwork
-
-| What | Where |
-|---|---|
-| Full-page background (HD) | `src/assets/images/background.png` (any file under `src/assets` with "background" in its name works) |
-| Clan flag | `public/images/clan-flag.png` |
-
-### Test live presence on your machine
-
-Open two tabs, then add `?as=Name` to each URL (development mode only):
+During development, open two browser tabs:
 
 ```text
 http://localhost:5173/?as=Sakshi
+```
+
+and
+
+```text
 http://localhost:5173/?as=Gautam
 ```
 
-Both names appear in the clan hub's online list, and the count goes up.
+The development presence transport can then be used to test multiple visitors/tabs.
 
-### Turn on real presence for every visitor (optional)
+---
+
+# ☁️ Supabase Realtime Setup
+
+To enable the production presence transport:
 
 ```bash
-npm i @supabase/supabase-js
+npm install @supabase/supabase-js
 ```
 
-Create a `.env` file:
+Create:
+
+```text
+.env
+```
+
+Add:
 
 ```env
 VITE_SUPABASE_URL=https://your-project.supabase.co
 VITE_SUPABASE_ANON_KEY=your-anon-key
 ```
 
-Then in `main.jsx`, before rendering the app:
+Then configure the presence transport in your application:
 
 ```jsx
-import { setPresenceTransport } from './usePresence';
-import { createSupabaseTransport } from './presenceSupabase';
+import { setPresenceTransport } from "./usePresence";
+import { createSupabaseTransport } from "./presenceSupabase";
 
 setPresenceTransport(
   createSupabaseTransport({
@@ -291,70 +490,193 @@ setPresenceTransport(
 );
 ```
 
-> No database table is needed. Supabase Realtime Presence handles it.
+> Supabase Realtime Presence can manage presence state without requiring a traditional database table for the presence list.
 
 ---
 
-## 🎨 Design System
+# 🎨 Design System
 
-Warm gold for battle actions, deep green for join actions, navy for panels and cream parchment for the journey. The background image does the fantasy heavy lifting, and the UI stays clean on top.
+DuoClash uses a fantasy-inspired competitive coding theme.
 
-| Role | Colour | Hex |
-|---|---|---|
-| Battle action | ![#f2b447](https://placehold.co/16x16/f2b447/f2b447.png) Gold | `#f2b447` |
-| Primary button | ![#f08a1f](https://placehold.co/16x16/f08a1f/f08a1f.png) Orange | `#f08a1f` |
-| Join action | ![#1c7a4f](https://placehold.co/16x16/1c7a4f/1c7a4f.png) Deep green | `#1c7a4f` |
-| Panels | ![#121c42](https://placehold.co/16x16/121c42/121c42.png) Navy | `#121c42` |
-| Parchment | ![#f2e4c4](https://placehold.co/16x16/f2e4c4/f2e4c4.png) Cream | `#f2e4c4` |
-| Online | ![#3ddc84](https://placehold.co/16x16/3ddc84/3ddc84.png) Green | `#3ddc84` |
+| Role              | Colour     | Hex       |
+| ----------------- | ---------- | --------- |
+| ⚔️ Battle Action  | Gold       | `#F2B447` |
+| 🔥 Primary Action | Orange     | `#F08A1F` |
+| 🟢 Join Action    | Deep Green | `#1C7A4F` |
+| 🌌 Panels         | Navy       | `#121C42` |
+| 📜 Parchment      | Cream      | `#F2E4C4` |
+| 🟢 Online         | Green      | `#3DDC84` |
 
----
+### Visual direction
 
-## 🗺️ Roadmap
-
-- [x] Responsive landing page with cinematic background
-- [x] How It Works journey, clan hub and Top Duelists
-- [x] Live presence (online roster and visitor count)
-- [ ] Authentication (sign up / log in)
-- [ ] Battle rooms with shareable links
-- [ ] Real-time code editor and synchronized timer
-- [ ] Automatic judging with test cases
-- [ ] XP, ranks and rewards
-- [ ] Real leaderboard connected to the database
-- [ ] Create and join clans, clan vs clan battles
-- [ ] Problem library by topic and difficulty
+```text
+Fantasy
+   +
+Competitive Programming
+   +
+Game Interface
+   +
+Clean Modern UI
+        ↓
+     DUOCLASH
+```
 
 ---
 
-## 🤝 Contributing
+# 🗺️ Roadmap
+
+### 🏰 Foundation
+
+* [x] Responsive landing page
+* [x] Cinematic fantasy background
+* [x] How It Works section
+* [x] Clan hub
+* [x] Top Duelists section
+* [x] Live presence
+
+### ⚔️ Battle System
+
+* [ ] Authentication
+* [ ] Create battle
+* [ ] Join battle
+* [ ] Shareable battle links
+* [ ] Battle lobby
+* [ ] Synchronized timer
+* [ ] Same problem for both players
+
+### 🧠 Coding System
+
+* [ ] Integrated code editor
+* [ ] Multiple test cases
+* [ ] Automatic code execution
+* [ ] Test-case judging
+* [ ] Submission history
+* [ ] Problem difficulty levels
+
+### 🏆 Gamification
+
+* [ ] XP system
+* [ ] Player ranks
+* [ ] Battle rewards
+* [ ] Win / loss statistics
+* [ ] Global leaderboard
+* [ ] Achievements
+
+### 👥 Clan System
+
+* [ ] Create clans
+* [ ] Join clans
+* [ ] Clan profiles
+* [ ] Clan rankings
+* [ ] Clan vs Clan battles
+
+### 📚 DSA Library
+
+* [ ] Arrays
+* [ ] Strings
+* [ ] Searching
+* [ ] Sorting
+* [ ] Linked Lists
+* [ ] Stack & Queue
+* [ ] Trees
+* [ ] Graphs
+* [ ] Dynamic Programming
+
+---
+
+# 📊 Future Player Progression
+
+```text
+              🏆
+         GRAND DUELIST
+              ▲
+              │
+          MASTER
+              ▲
+              │
+           ELITE
+              ▲
+              │
+          WARRIOR
+              ▲
+              │
+          ROOKIE
+              ▲
+              │
+        ⚔️ FIRST BATTLE
+```
+
+Players will eventually be able to build their competitive profile through battles, XP, ranks and leaderboard progression.
+
+---
+
+# 🤝 Contributing
 
 Contributions are welcome.
 
-1. Fork the repo
-2. Create a branch: `git checkout -b feature/amazing-feature`
-3. Commit your changes: `git commit -m "Add amazing feature"`
-4. Push: `git push origin feature/amazing-feature`
-5. Open a Pull Request
+### 1. Fork the repository
+
+### 2. Create a feature branch
+
+```bash
+git checkout -b feature/amazing-feature
+```
+
+### 3. Commit your changes
+
+```bash
+git add .
+git commit -m "Add amazing feature"
+```
+
+### 4. Push the branch
+
+```bash
+git push origin feature/amazing-feature
+```
+
+### 5. Open a Pull Request
+
+Describe what you changed and why.
 
 ---
 
-## 📜 License
+# 📜 License
 
-Distributed under the **MIT License**. See `LICENSE` for details.
+Distributed under the **MIT License**.
+
+See the `LICENSE` file for details.
 
 ---
 
-## 👩‍💻 Author
+# 👩‍💻 Author
 
-**Ruchitra Jasmatiya**
-GitHub: [@Ruchitra-Jasmatiya](https://github.com/Ruchitra-Jasmatiya)
+<div align="center">
+
+### Ruchitra Jasmatiya
+
+<a href="https://github.com/Ruchitra-Jasmatiya">
+<img src="https://img.shields.io/badge/GitHub-Ruchitra--Jasmatiya-181717?style=for-the-badge&logo=github" alt="GitHub" />
+</a>
+
+</div>
 
 ---
 
 <div align="center">
 
-### ⚔️ Two minds. One battle. May the best coder win. ⚔️
+<br />
 
-If you like this project, give it a ⭐
+# ⚔️ TWO MINDS. ONE BATTLE.
+
+### **May the best coder win.**
+
+<br />
+
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=16&duration=2800&pause=700&color=F2B447&center=true&vCenter=true&width=620&lines=Think+fast.;Code+clean.;Beat+your+rival.;Climb+the+leaderboard.;Welcome+to+DuoClash." alt="DuoClash closing animation" />
+
+<br /><br />
+
+⭐ **If you like DuoClash, consider starring the repository.**
 
 </div>
